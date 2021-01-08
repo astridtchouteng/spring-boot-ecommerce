@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.shop.ecommerce.entity.State;
 
-@CrossOrigin("http://localhst:4200")
+@CrossOrigin("http://localhost:4200")
 public interface StateRepository extends JpaRepository<State, Integer> {
 
 	// retrieve states for a given country code

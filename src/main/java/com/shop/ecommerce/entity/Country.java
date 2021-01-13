@@ -31,6 +31,6 @@ public class Country {
 	private String name;
 	
 	@OneToMany(mappedBy = "country")
-	@JsonIgnore // jackson annotaions
+	@JsonIgnore // jackson annotations
 	private List<State> state;
 }

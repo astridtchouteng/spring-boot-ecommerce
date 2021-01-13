@@ -38,7 +38,7 @@ public class Order {
 	private String orderTrackingNumber;
 	
 	@Column(name="total_quantity")
-	private int totaQuantity;
+	private int totalQuantity;
 	
 	@Column(name="total_price")
 	private BigDecimal totalPrice;
@@ -48,7 +48,7 @@ public class Order {
 	
 	@Column(name="date_created")
 	@CreationTimestamp
-	private Date dataCreated;
+	private Date dateCreated;
 	
 	@Column(name="last_updated")
 	@UpdateTimestamp
@@ -59,11 +59,11 @@ public class Order {
 	private Customer customer;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "shipping_address", referencedColumnName = "id")
+	@JoinColumn(name = "shipping_address_id", referencedColumnName = "id")
 	private Address shippingAddress;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="billing_address", referencedColumnName = "id")
+	@JoinColumn(name="billing_address_id", referencedColumnName = "id")
 	private Address billingAddress;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "order")

@@ -16,7 +16,7 @@ import com.shop.ecommerce.entity.Order;
 public class CheckoutServiceImpl implements CheckoutService {
 
 	private CustomerRepository customerRepository;
-	
+		
 	public CheckoutServiceImpl(CustomerRepository customerRepository) {
 		this.customerRepository = customerRepository;
 	}
